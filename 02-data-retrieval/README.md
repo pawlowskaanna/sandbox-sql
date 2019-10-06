@@ -6,3 +6,5 @@ Sample SQL statements
     SELECT 
         'The Job ID for the ' || JOB_TITLE || ' job is: ' || JOB_ID AS "Job description" 
     FROM HR.JOBS;
+
+![alt text](https://github.com/pawlowskaanna/sandbox-sql/blob/master/02-data-retrieval/images/ch02q2.PNG )
