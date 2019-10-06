@@ -1,1 +1,1 @@
-# sandbox-sql
+# Sandbox project for SQL development
