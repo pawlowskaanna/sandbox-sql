@@ -8,3 +8,5 @@ Sample SQL statements
     FROM HR.JOBS;
 
 ![alt text](https://github.com/pawlowskaanna/sandbox-sql/blob/master/02-data-retrieval/images/ch02q2.PNG )
+
+---
