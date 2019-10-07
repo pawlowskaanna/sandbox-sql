@@ -18,3 +18,5 @@ Sample SQL statements
          
     SELECT (22/7) * (6000 * 6000 ) "Area"
     FROM SYS.dual
+
+![alt text](https://github.com/pawlowskaanna/sandbox-sql/blob/master/02-data-retrieval/images/ch02q3.PNG )
