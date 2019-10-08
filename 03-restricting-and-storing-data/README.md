@@ -11,3 +11,10 @@ Sample SQL statements
 ![alt text](https://github.com/pawlowskaanna/sandbox-sql/blob/master/03-restricting-and-storing-data/images/ch03-where-clause.PNG )
 
 ---
+
+:wrench: PL: WHERE można używać także w celu porównywania wyrażeń algebraicznych  
+           ENG: The WHERE clause can be also used to compare the arithmetic expressions
+           
+     SELECT last_name, salary
+     FROM HR.employees
+     WHERE salary/10 = department_id*10;
