@@ -8,6 +8,6 @@ Sample SQL statements
     FROM HR.countries
     WHERE region_id=3;
 
-![alt text](https://github.com/pawlowskaanna/sandbox-sql/blob/master/02-data-retrieval/images/ch02q2.PNG )
+![alt text](https://github.com/pawlowskaanna/sandbox-sql/blob/master/03-restricting-and-storing-data/images/ch03-where-clause.PNG )
 
 ---
