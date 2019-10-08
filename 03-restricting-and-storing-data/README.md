@@ -18,3 +18,4 @@ Sample SQL statements
      SELECT last_name, salary
      FROM HR.employees
      WHERE salary/10 = department_id*10;
+![alt text](https://github.com/pawlowskaanna/sandbox-sql/blob/master/03-restricting-and-storing-data/images/ch03-comparing-expressions.PNG )
