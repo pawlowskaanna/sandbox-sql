@@ -28,5 +28,6 @@ Querying - select custom name from PL products
     FROM ANIA.PRODUCTS
     WHERE PRODUCT_CODE LIKE 'PL%';
 
+![alt text](https://github.com/pawlowskaanna/sandbox-sql/blob/master/02-data-retrieval/images/ch02q2.PNG )
 
 ### Linia zamówienia
