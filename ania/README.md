@@ -18,9 +18,15 @@ Inserting - DML (Data Modification Language) SQL
     INSERT INTO ANIA.PRODUCTS (PRODUCT_CODE, NAME) VALUES ('PL/1560/CH', 'Hoker 13');
     INSERT INTO ANIA.PRODUCTS (PRODUCT_CODE, NAME) VALUES ('UK/6501/PC', 'Painting - industrial 002');
 
-Querying - SQL queries
+Querying - select all
 
     SELECT * FROM ANIA.PRODUCTS;
+
+Querying - select custom name from PL products
+
+    SELECT NAME || ' [ ' || PRODUCT_CODE || ' ]' "PRODUCT_LINE"
+    FROM ANIA.PRODUCTS
+    WHERE PRODUCT_CODE LIKE 'PL%';
 
 
 ### Linia zamówienia
