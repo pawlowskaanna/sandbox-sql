@@ -2,7 +2,7 @@
 
 
 ### Produkt
-    CREATE TABLE PRODUCTS 
+    CREATE TABLE ANIA.PRODUCTS 
     (
       PRODUCT_CODE  VARCHAR2(20)    NOT NULL, 
       NAME          VARCHAR2(50)    NOT NULL, 
