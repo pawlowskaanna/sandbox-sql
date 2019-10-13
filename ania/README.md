@@ -1,4 +1,16 @@
 ### Zamówienie
+Table creation - DDL (Data Definition Language) SQL
+
+
+    CREATE TABLE "ANIA"."ORDERS" 
+    (	
+    "ORDER_NR" VARCHAR2(25 CHAR), 
+    "ORDER_SUB" VARCHAR2(20 CHAR), 
+    "ORDER_EXE" VARCHAR2(20 CHAR),
+    CONSTRAINT PK_ORDERS PRIMARY KEY(ORDER_NR)
+    );
+
+Inserting - DML (Data Modification Language) SQL
 
 
 ### Product
