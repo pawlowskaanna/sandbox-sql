@@ -48,4 +48,21 @@ Querying - select custom name from PL products
 
 <img src="./pictures/ania01q2.png" width="300" >
 
-### Linia zamówienia
+### Order liners
+Table creation - DDL (Data Definition Language) SQL
+
+    CREATE TABLE "ANIA"."ORDER_LINES" 
+    (	
+    "ORDER_NR" VARCHAR2(25 CHAR) NOT NULL, 
+    "LINE_NR" NUMBER (20) NOT NULL,
+    "PRODUCT_CODE" VARCHAR2(20 CHAR) NOT NULL,
+    "QUANTITY" NUMBER (10),
+
+    CONSTRAINT PK_ORDER_LINES PRIMARY KEY(ORDER_NR , LINE_NR),
+    CONSTRAINT FK_ORDER_LINES_PRODUCTS FOREIGN KEY(PRODUCT_CODE) REFERENCES ANIA.PRODUCTS(PRODUCT_CODE),
+    CONSTRAINT FK_ORDER_LINES_ORDERS FOREIGN KEY(ORDER_NR) REFERENCES ANIA.ORDERS(ORDER_NR)
+    );
+    
+Inserting - DML (Data Modification Language) SQL
+
+
