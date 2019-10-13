@@ -74,10 +74,13 @@ Inserting - DML (Data Modification Language) SQL
     INSERT INTO ANIA.ORDER_LINES (ORDER_NR, LINE_NR, PRODUCT_CODE, QUANTITY) VALUES ('PL/023', 1 , 'PL/1045/TB' , 215) ;
     INSERT INTO ANIA.ORDER_LINES (ORDER_NR, LINE_NR, PRODUCT_CODE, QUANTITY) VALUES ('PL/023', 2 , 'PL/1560/CH' , 2) ;
 
-Updaeing - DML ((Data Modification Language) SQL
+Updating - DML ((Data Modification Language) SQL
     
     UPDATE ANIA.PRODUCTS 
     SET DESCRIPTION = 'Temporary unavaliable'
     WHERE product_code = 'UK/6501/PC';
 
+Delete - DML
 
+    DELETE FROM ANIA.PRODUCTS
+    WHERE PRODUCT_CODE = 'PL/1445/CH';
