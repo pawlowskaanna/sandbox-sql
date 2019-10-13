@@ -13,6 +13,10 @@ Table creation - DDL (Data Definition Language) SQL
 
 Inserting - DML (Data Modification Language) SQL
 
+    INSERT INTO ANIA.ORDERS (ORDER_NR, ORDER_SUB) VALUES ('PL/001', TO_DATE('13-10-2019', 'DD-MM-YYYY'));
+    INSERT INTO ANIA.ORDERS (ORDER_NR, ORDER_SUB) VALUES ('PL/023', TO_DATE('14-10-2019', 'DD-MM-YYYY'));
+    INSERT INTO ANIA.ORDERS (ORDER_NR, ORDER_SUB) VALUES ('PL/013', TO_DATE('15-10-2019', 'DD-MM-YYYY'));
+
 
 ### Product
 Table creation - DDL (Data Definition Language) SQL
