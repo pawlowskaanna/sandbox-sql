@@ -2,11 +2,12 @@
 Table creation - DDL (Data Definition Language) SQL
 
 
+    -- DROP TABLE ANIA.ORDERS;
     CREATE TABLE "ANIA"."ORDERS" 
     (	
     "ORDER_NR" VARCHAR2(25 CHAR), 
-    "ORDER_SUB" VARCHAR2(20 CHAR), 
-    "ORDER_EXE" VARCHAR2(20 CHAR),
+    "ORDER_SUB" DATE, 
+    "ORDER_EXE" DATE,
     CONSTRAINT PK_ORDERS PRIMARY KEY(ORDER_NR)
     );
 
