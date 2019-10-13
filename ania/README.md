@@ -48,7 +48,7 @@ Querying - select custom name from PL products
 
 <img src="./pictures/ania01q2.png" width="300" >
 
-### Order liners
+### Order lines
 Table creation - DDL (Data Definition Language) SQL
 
     CREATE TABLE "ANIA"."ORDER_LINES" 
