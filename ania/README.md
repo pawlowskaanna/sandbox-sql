@@ -17,6 +17,7 @@ Inserting - DML (Data Modification Language) SQL
     INSERT INTO ANIA.ORDERS (ORDER_NR, ORDER_SUB) VALUES ('PL/023', TO_DATE('14-10-2019', 'DD-MM-YYYY'));
     INSERT INTO ANIA.ORDERS (ORDER_NR, ORDER_SUB) VALUES ('PL/013', TO_DATE('15-10-2019', 'DD-MM-YYYY'));
 
+---
 
 ### Product
 Table creation - DDL (Data Definition Language) SQL
@@ -48,6 +49,8 @@ Querying - select custom name from PL products
 
 <img src="./pictures/ania01q2.png" width="300" >
 
+---
+
 ### Order lines
 Table creation - DDL (Data Definition Language) SQL
 
@@ -71,5 +74,10 @@ Inserting - DML (Data Modification Language) SQL
     INSERT INTO ANIA.ORDER_LINES (ORDER_NR, LINE_NR, PRODUCT_CODE, QUANTITY) VALUES ('PL/023', 1 , 'PL/1045/TB' , 215) ;
     INSERT INTO ANIA.ORDER_LINES (ORDER_NR, LINE_NR, PRODUCT_CODE, QUANTITY) VALUES ('PL/023', 2 , 'PL/1560/CH' , 2) ;
 
+Updaeing - DML ((Data Modification Language) SQL
+    
+    UPDATE ANIA.PRODUCTS 
+    SET DESCRIPTION = 'Temporary unavaliable'
+    WHERE product_code = 'UK/6501/PC';
 
 
