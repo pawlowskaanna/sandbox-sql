@@ -93,16 +93,17 @@ Joining
     JOIN PRODUCTS P ON P.PRODUCT_CODE = OL.PRODUCT_CODE;
 <img src="./pictures/ania01join1.PNG" >
     
-    -- Join selected columns
+    -- Joining selected columns
     SELECT OL.ORDER_NR, OL.LINE_NR, P.NAME, OL.QUANTITY, O.ORDER_SUB FROM ANIA.ORDER_LINES OL
     JOIN ORDERS O ON O.ORDER_NR = OL.ORDER_NR
     JOIN PRODUCTS P ON P.PRODUCT_CODE = OL.PRODUCT_CODE;
+<img src="./pictures/ania01join2.PNG" >
 
-
-    --Join columns: selected column P.NAME is from PRODUCTS table. The ORDER_LINES table is joined with the PRODUCTS table via primary key
+    --Joining columns: selected column P.NAME is from PRODUCTS table. The ORDER_LINES table is joined with the PRODUCTS table via primary key
     --In result it is possible to select the NAME column from PRODUCTS even though it is not a foreign key
     
     SELECT OL.ORDER_NR, OL.LINE_NR, P.NAME, OL.QUANTITY FROM ANIA.ORDER_LINES OL
     JOIN ORDERS O ON O.ORDER_NR = OL.ORDER_NR
     JOIN PRODUCTS P ON P.PRODUCT_CODE = OL.PRODUCT_CODE
     WHERE O.ORDER_SUB=TO_DATE('20191014','YYYYMMDD');
+<img src="./pictures/ania01join3.PNG" >
