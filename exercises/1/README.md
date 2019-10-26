@@ -12,6 +12,17 @@
     -- SQL DDL
     
     
+    -- Creating COMPONENTS table with primary key: COMPONENT_CODE with additional CONSTRAINT CHECK (CONSTRAINT col_name CHECK (col IN (...)))
+
+    CREATE TABLE Z1.COMPONENTS 
+    (	
+    "COMPONENT_CODE" number(10,0) NOT NULL,
+    "NAME"      VARCHAR2(50 char) NOT NULL,
+    "WEIGHT"    NUMBER(7,3) NOT NULL,
+    "AVAILABILITY"  VARCHAR2(20), 
+    CONSTRAINT PK_COMPONENTS PRIMARY KEY(COMPONENT_CODE),
+    CONSTRAINT CHK_AVAILABILITY CHECK (AVAILABILITY IN ('avaliable', 'unavaliable', 'running out'))
+    );
     
      -- Creating STRUCTURAL_ELEMENTS table with primary key: ELEMENT_CODE
      
