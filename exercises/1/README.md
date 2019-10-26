@@ -4,10 +4,9 @@
 :pencil: TODO: diagram
 
 #### Model fizyczny
-:pencil: TODO: diagram
 
+<img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/1/pictures/z1.png" width="800" >
 #### SQL DDL
-:pencil: TODO
 
     -- SQL DDL
     
