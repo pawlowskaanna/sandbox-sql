@@ -40,7 +40,6 @@
     
      -- Creating ELEMENT_COMPONENTS table with primary key: COMPONENT_KODE, ELEMENT_CODE
 
-     
     CREATE TABLE Z1.ELEMENT_COMPONENTS 
     (	
     "ELEMENT_CODE"  nchar(10) NOT NULL,
