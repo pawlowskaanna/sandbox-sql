@@ -51,27 +51,58 @@
 #### SQL DML
 :pencil: TODO
 
-:rocket: STRUCTURAL ELEMENTS
-
 :x: Delete unproper rows
 
     DELETE
     FROM structural_elements;
-    
+
+:rocket: COMPONENTS    
+
 :one:
     
-    INSERT INTO Z1.STRUCTURAL_ELEMENTS 
-    (ELEMENT_CODE , name, ELEMENT_DESCRIPTION, ENTRY, WEIGHT) 
-    VALUES ('6101010/01', 'E10x10', 'Endcup,square,black', TO_DATE('13-01-2019', 'DD-MM-YYYY'), '0000,015');
+    INSERT INTO Z1.COMPONENTS 
+    (COMPONENT_CODE, NAME, WEIGHT, AVAILABILITY) 
+    VALUES ('6101010001', 'E10x10', '0000,015', 'avaliable');
 
  :two:
  
-     INSERT INTO Z1.STRUCTURAL_ELEMENTS 
-    (ELEMENT_CODE , name, ELEMENT_DESCRIPTION, ENTRY, WEIGHT) 
-    VALUES ('6201510/01', 'F15x10', 'Endcup,rectang,black', TO_DATE('20-02-2019', 'DD-MM-YYYY'), '0000,025');
+    INSERT INTO Z1.COMPONENTS 
+    (COMPONENT_CODE, NAME, WEIGHT, AVAILABILITY) 
+    VALUES ('6201510001', 'F15x10', '0000,025', 'unavaliable');
 
 :three:
 
     INSERT INTO Z1.STRUCTURAL_ELEMENTS 
     (ELEMENT_CODE , name, ELEMENT_DESCRIPTION, ENTRY, WEIGHT) 
     VALUES ('ISKF010/35', 'ISKF10x35', 'Sliding element', TO_DATE('13-03-2019', 'DD-MM-YYYY'), '0000,040');
+    
+:four:
+
+    INSERT INTO Z1.COMPONENTS 
+    (COMPONENT_CODE, NAME, WEIGHT, AVAILABILITY) 
+    VALUES ('990014035', 'ISKF14x35', '0000,045', 'avaliable');
+
+:five:
+
+    INSERT INTO Z1.COMPONENTS 
+    (COMPONENT_CODE, NAME, WEIGHT, AVAILABILITY) 
+    VALUES ('6000000022', 'GL22standard', '0000,020', 'running out');
+    
+:six:
+
+    INSERT INTO Z1.COMPONENTS 
+    (COMPONENT_CODE, NAME, WEIGHT, AVAILABILITY) 
+    VALUES ('6000000032', 'GL32standard', '0000,030', 'avaliable');
+    
+:seven:
+
+:eight:
+
+:nine:
+
+:ten:
+
+:eleven:
+
+:twelfe:
+
