@@ -53,7 +53,7 @@
 
 :rocket: STRUCTURAL ELEMENTS
 
-:X: Delete unproper rows
+:x: Delete unproper rows
 
     DELETE
     FROM structural_elements;
