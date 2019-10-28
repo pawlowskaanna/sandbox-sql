@@ -29,7 +29,7 @@
     (	
     "ELEMENT_CODE"  nchar(10) NOT NULL,
     "NAME"          varchar(20) NOT NULL,
-    "DESC"          varchar(20),
+    "ELEMENT_DESCRIPTION"          varchar(20),
     "ENTRY"         date NOT NULL,
     "ARCH"          date,
     "WEIGHT"        number(7,3) NOT NULL,
@@ -50,5 +50,13 @@
 
 #### SQL DML
 :pencil: TODO
+
+:rocket: STRUCTURAL ELEMENTS
+    
+:one:
+    
+    INSERT INTO Z1.STRUCTURAL_ELEMENTS 
+    (ELEMENT_CODE , name, ELEMENT_DESCRIPTION, ENTRY, WEIGHT) 
+    VALUES ('6101010/01', 'E10x10', 'Endcup,square,black', TO_DATE('13-01-2019', 'DD-MM-YYYY'), '0000,015');
 
  
