@@ -1,11 +1,15 @@
 ### Zadanie 1
 
 #### Model ERD
-:pencil: TODO: diagram
+
+<img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/1/pictures/z1.2.png" width="500" >
+
 
 #### Model fizyczny
 
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/1/pictures/z1.png" width="800" >
+
+
 #### SQL DDL
 
     -- SQL DDL
@@ -49,7 +53,6 @@
     );
 
 #### SQL DML
-:pencil: TODO
 
 :x: Delete unproper rows
 
