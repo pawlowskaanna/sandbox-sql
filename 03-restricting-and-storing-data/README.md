@@ -19,3 +19,18 @@ Sample SQL statements
      FROM HR.employees
      WHERE salary/10 = department_id*10;
 ![alt text](https://github.com/pawlowskaanna/sandbox-sql/blob/master/03-restricting-and-storing-data/images/ch03-comparing-expressions.PNG )
+
+---
+:pencil2:
+Reusable query, input: tax rate, EMPLOYEE_ID 
+Raturned values: EMPLOYEE_ID, FIRST_NAME, SALARY, ANNUAL SALARY(SALARY * 12), TAX_RATE, TAX (TAX_RATE * 12) 
+
+           select employee_id, first_name, salary, salary * 12 AS "Annual salary", 
+           &&tax_rate, (&TAX_RATE * (salary * 12))AS "TAX"
+           FROM HR.employees
+           where employee_id = &employee_id;
+           
+1 - SELECT command ; "Annual salary" defined
+2 - '&&' because once given tax value isn't changed , "TAX" defined
+3 - FROM clause
+4 - restrains rows to wanted employee
