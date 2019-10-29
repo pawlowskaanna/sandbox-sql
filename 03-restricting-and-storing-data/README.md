@@ -32,3 +32,17 @@ Raturned values: EMPLOYEE_ID, FIRST_NAME, SALARY, ANNUAL SALARY(SALARY * 12), TA
 2 - '&&' because once given tax value isn't changed , "TAX" defined </br>
 3 - FROM clause </br>
 4 - restraining rows to wanted employee </br>
+
+___
+
+</br>
+TASK: </br>
+A customer requires a hard disk drive and a graphics card for her personal computer. She is willing to spend between $500 and $800 on the disk drive but is unsure about the cost of a graphics card. Her only requirement is that the resolution supported by the graphics card should be either 1024×768 or 1280×1024. As the sales representative, you have been tasked to write one query that searches the PRODUCT_INFORMATION table where the PRODUCT_NAME value begins with HD (hard disk) or GP (graphics processor) and their list prices. Remember the hard disk list prices must be between $500 and $800 and the graphics processors need to support either 1024×768 or 1280×1024. Sort the results in descending LIST_PRICE order.
+
+    SELECT PRICE
+    FROM PRODUCT_INFORMATION
+    WHERE PRODUCT_NAME LIKE "HD%" OR PRODUCT_NAME LIKE "GP%"
+    AND PRICE BETWEEN 500 AND 800
+    AND (PRODUCT_DESCRIPTION LIKE '%1024x768%' OR '%1280x1924%')
+    OR PRODUCT_NAME LIKE '%1024x768%' OR '%1280x1924%'
+    SORT BY LIST_PRICE DESC;
