@@ -1,8 +1,7 @@
 # Restricting and sorting data samples for learning purpose
 Sample SQL statements
 
-:wrench: PL: Ograniczenie wyświetlonych COUNTRY_NAME do tych wersów, któr mają wartość "3" w kolumnie REGION_ID    
-           ENG: Restricting returned rows to those which contain a "3" in the REGION_ID column
+:wrench: Restricting returned rows to those which contain a "3" in the REGION_ID column
 
     SELECT country_name
     FROM HR.countries
@@ -12,8 +11,7 @@ Sample SQL statements
 
 ---
 
-:wrench: PL: WHERE można używać także w celu porównywania wyrażeń algebraicznych  
-           ENG: The WHERE clause can be also used to compare the arithmetic expressions
+:wrench: ENG: The WHERE clause can be also used to compare the arithmetic expressions
            
      SELECT last_name, salary
      FROM HR.employees
@@ -22,7 +20,7 @@ Sample SQL statements
 
 ---
 :pencil2:
-Reusable query, input: tax rate, EMPLOYEE_ID 
+Reusable query, input: tax rate, EMPLOYEE_ID </br>
 Raturned values: EMPLOYEE_ID, FIRST_NAME, SALARY, ANNUAL SALARY(SALARY * 12), TAX_RATE, TAX (TAX_RATE * 12) 
 
            select employee_id, first_name, salary, salary * 12 AS "Annual salary", 
@@ -30,7 +28,7 @@ Raturned values: EMPLOYEE_ID, FIRST_NAME, SALARY, ANNUAL SALARY(SALARY * 12), TA
            FROM HR.employees
            where employee_id = &employee_id;
            
-1 - SELECT command ; "Annual salary" defined
-2 - '&&' because once given tax value isn't changed , "TAX" defined
-3 - FROM clause
-4 - restrains rows to wanted employee
+1 - SELECT command ; "Annual salary" defined </br>
+2 - '&&' because once given tax value isn't changed , "TAX" defined </br>
+3 - FROM clause </br>
+4 - restraining rows to wanted employee </br>
