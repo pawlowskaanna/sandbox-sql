@@ -13,5 +13,4 @@ Element konstrukcyjny może składać się z wielu **komponentów**. Komponent j
 2. Zaprojektuj model fizyczny (tabele)
 3. Stwórz SQL DDL dla każdej tabeli
 4. Stwórz SQL DML (3 elementy i 12 komponentów)
-5. Stwórz następujące zapytania (SQL Queries):
-   - *TO BE ADDED*
+5. Stwórz zapytania (SQL Queries)
