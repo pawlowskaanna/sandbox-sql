@@ -99,7 +99,7 @@
 
 #### SQL Queries
 
-##### 1. 
+##### 1. Easy
 Select all components whose code begins with '6' and are heavier than 10 gramms. Sort results from heaviest to lightest (hint: user ORDER BY over column WEIGHT with proper ASC/DESC switch ). Please make sure you display weight as shown in the picture.
 
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/1/pictures/z1.q1.png" width="200" >
@@ -109,7 +109,7 @@ Select all components whose code begins with '6' and are heavier than 10 gramms.
     
 
     
-##### 2. 
+##### 2. Intermediate
 Select all elements and their components. Display only element name and component name. Name the columns as shown in picture and sort results by element name and component name.  
 
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/1/pictures/z1.q2.png" width="250" >
@@ -117,4 +117,10 @@ Select all elements and their components. Display only element name and componen
     -- Solution SQL
     -- TODO
     
-    
+##### 3. Difficult
+Display number of components for each element (hint: use function COUNT and GROUP BY clause). Display summarized components weight in gramms as shown in figure (hint: use function SUM and GROUP BY clause).
+
+<img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/1/pictures/z1q3.png" width="350" >
+
+    -- Solution SQL
+    -- TODO
