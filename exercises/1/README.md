@@ -54,12 +54,7 @@
 
 #### SQL DML
 
-:x: Delete unproper rows
-
-    DELETE
-    FROM structural_elements;
-
-:rocket: COMPONENTS    
+:rocket: Inserting Components ( COMPONENTS )    
     
     INSERT INTO Z1.COMPONENTS (COMPONENT_CODE, NAME, WEIGHT, AVAILABILITY) VALUES ('6101010001', 'E10x10', '0000,015', 'avaliable');
     INSERT INTO Z1.COMPONENTS (COMPONENT_CODE, NAME, WEIGHT, AVAILABILITY) VALUES ('6201510001', 'F15x10', '0000,025', 'unavaliable');
@@ -74,13 +69,13 @@
     INSERT INTO Z1.COMPONENTS (COMPONENT_CODE, NAME, WEIGHT, AVAILABILITY) VALUES ('8021111013', 'ISKA013', '0000,004', 'avaliable');
     INSERT INTO Z1.COMPONENTS (COMPONENT_CODE, NAME, WEIGHT, AVAILABILITY) VALUES ('8021111013', 'ISKA013', '0000,004', 'avaliable');
     
-:airplane: STRUCTURAL ELEMENTS
+:airplane: Inserting Elements ( STRUCTURAL ELEMENTS )
 
     INSERT INTO Z1.STRUCTURAL_ELEMENTS (ELEMENT_CODE, NAME, ELEMENT_DESCRIPTION, ENTRY, WEIGHT) VALUES ('SCAF/PL/01', 'SCAFFOLD01', 'Scaffold,Poland,v01', TO_DATE('31-01-2019', 'DD-MM-YYYY'),'250,5');
     INSERT INTO Z1.STRUCTURAL_ELEMENTS (ELEMENT_CODE, NAME, ELEMENT_DESCRIPTION, ENTRY, WEIGHT) VALUES ('RACK/PL/11','RACK01S1','rack,v01,size1', TO_DATE('15-03-2019', 'DD-MM-YYYY'),'130,0');
     INSERT INTO Z1.STRUCTURAL_ELEMENTS (ELEMENT_CODE, NAME, ELEMENT_DESCRIPTION, ENTRY, WEIGHT) VALUES ('RACK/PL/12','RACK01S2','rack,v01,size2', TO_DATE('21-06-2019', 'DD-MM-YYYY'),'180,0');
   
-:helicopter:
+:helicopter: Creating relationships between Elements and Components ( ELEMENT_COMPONENTS )
 
     INSERT INTO ELEMENT_COMPONENTS (ELEMENT_CODE, COMPONENT_CODE) VALUES ('SCAF/PL/01','6101010001');
     INSERT INTO ELEMENT_COMPONENTS (ELEMENT_CODE, COMPONENT_CODE) VALUES ('SCAF/PL/01','990010035');
@@ -99,3 +94,27 @@
     INSERT INTO ELEMENT_COMPONENTS (ELEMENT_CODE, COMPONENT_CODE) VALUES ('RACK/PL/12','6000000022');
     INSERT INTO ELEMENT_COMPONENTS (ELEMENT_CODE, COMPONENT_CODE) VALUES ('RACK/PL/12','6000030032');
     INSERT INTO ELEMENT_COMPONENTS (ELEMENT_CODE, COMPONENT_CODE) VALUES ('RACK/PL/12','8021111013');
+
+
+
+#### SQL Queries
+
+##### 1. 
+Select all components whose code begins with '6' and are heavier than 10 gramms. Sort results from heaviest to lightest (hint: user ORDER BY over column WEIGHT with proper ASC/DESC switch ). Please make sure you display weight as shown in the picture.
+
+<img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/1/pictures/z1.q1.png" width="200" >
+
+    -- Solution SQL
+    -- TODO
+    
+
+    
+##### 2. 
+Select all elements and their components. Display only element name and component name. Name the columns as shown in picture and sort results by element name and component name.  
+
+<img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/1/pictures/z1.q2.png" width="250" >
+
+    -- Solution SQL
+    -- TODO
+    
+    
