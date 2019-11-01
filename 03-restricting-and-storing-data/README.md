@@ -54,7 +54,14 @@ Envelope printing restricts the addressee field to 16 characters. Ideally, the a
 You are required to retrieve a list of FIRST_NAME and LAST_NAME values and formal names for employees where the combined length of FIRST_NAME and LAST_NAME exceeds 15 characters.
 </br>
 
-    SELECT CONCAT FIRST_NAME, LAST_NAME, SUBSTR(FIRST_NAME, 1) || SUBSTR(LAST_NAME, 1 , 14) || FORMAL_NAME 
+    -- Using concatenate operator (||)
+    SELECT CONCAT FIRST_NAME, LAST_NAME, SUBSTR(FIRST_NAME, 1) || SUBSTR(LAST_NAME, 1 , 14) AS FORMAL_NAME 
     FROM HR.EMPLOYEES
-    WHERE LENGHT(FIRST_NAME) + LENGTH(LAST_NAME) > 15 ;
+    WHERE ( LENGHT(FIRST_NAME) + LENGTH(LAST_NAME) ) > 15 ;
+    
+    -- Using CONCAT function
+    SELECT FIRST_NAME, LAST_NAME, CONCAT( SUBSTR(FIRST_NAME, 1), SUBSTR(LAST_NAME, 1 , 14) ) AS FORMAL_NAME 
+    FROM HR.EMPLOYEES
+    WHERE ( LENGTH(FIRST_NAME) + LENGTH(LAST_NAME) ) > 15 ;
+    
 
