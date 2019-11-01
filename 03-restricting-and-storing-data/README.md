@@ -46,10 +46,10 @@ A customer requires a hard disk drive and a graphics card for her personal compu
     OR PRODUCT_NAME LIKE 'GP%1024%';
     
     
-    ___
+___
     
 </br>
-TASK: </br>
+:roller_coaster: TASK: </br>
 Envelope printing restricts the addressee field to 16 characters. Ideally, the addressee field contains employees’ FIRST_NAME and LAST_NAME values separated by a single space. When the combined length of an employee’s FIRST_NAME and LAST_NAME exceeds 15 characters, the addressee field should contain their formal name. An employee’s formal name is made up of the first letter of their FIRST_ NAME and the first 14 characters of their LAST_NAME. </br>
 You are required to retrieve a list of FIRST_NAME and LAST_NAME values and formal names for employees where the combined length of FIRST_NAME and LAST_NAME exceeds 15 characters.
 </br>
