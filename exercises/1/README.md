@@ -105,6 +105,7 @@ Select all components whose code begins with '6' and are heavier than 10 gramms.
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/1/pictures/z1.q1.png" width="200" >
 
     -- Solution SQL
+    
     SELECT NAME, SUBSTR(RPAD(WEIGHT, 4 ,'0') , -2) || 'g' "WEIGHT"  
     FROM COMPONENTS
     WHERE COMPONENT_CODE LIKE '6%'
@@ -118,6 +119,7 @@ Select all elements and their components. Display only element name and componen
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/1/pictures/z1.q2.png" width="250" >
 
     -- Solution SQL
+    
     SELECT SE.NAME "ELEMENT_NAME" , C.NAME "COMPONENT_NAME" FROM Z1.ELEMENT_COMPONENTS 
     JOIN COMPONENTS C ON C.COMPONENT_CODE = ELEMENT_COMPONENTS.COMPONENT_CODE
     JOIN STRUCTURAL_ELEMENTS SE ON SE.ELEMENT_CODE = ELEMENT_COMPONENTS.ELEMENT_CODE
@@ -131,7 +133,7 @@ Display number of components for each element (hint: use function COUNT and GROU
     -- Solution SQL
     
     SELECT SE.NAME "ELEMENT_NAME" , 
-    COUNT (C.COMPONENT_CODE)"COMPONENTS" , TRUNC (TRIM(leading ',' FROM (SUM (C.WEIGHT))),0) || 'g' "COMPONENTS_WEIGHT"
+    COUNT (C.COMPONENT_CODE)"COMPONENTS" , SUM(C.WEIGHT)*1000 || 'g' AS COMPONENTS_WEIGHT
     FROM Z1.ELEMENT_COMPONENTS 
     JOIN STRUCTURAL_ELEMENTS SE ON SE.ELEMENT_CODE = ELEMENT_COMPONENTS.ELEMENT_CODE
     JOIN COMPONENTS C ON C.COMPONENT_CODE = ELEMENT_COMPONENTS.COMPONENT_CODE
