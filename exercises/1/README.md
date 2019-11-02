@@ -118,7 +118,10 @@ Select all elements and their components. Display only element name and componen
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/1/pictures/z1.q2.png" width="250" >
 
     -- Solution SQL
-    -- TODO
+    SELECT SE.NAME "ELEMENT_NAME" , C.NAME "COMPONENT_NAME" FROM Z1.ELEMENT_COMPONENTS 
+    JOIN COMPONENTS C ON C.COMPONENT_CODE = ELEMENT_COMPONENTS.COMPONENT_CODE
+    JOIN STRUCTURAL_ELEMENTS SE ON SE.ELEMENT_CODE = ELEMENT_COMPONENTS.ELEMENT_CODE
+    ORDER BY 1,2;
     
 ##### 3. Difficult
 Display number of components for each element (hint: use function COUNT and GROUP BY clause). Display summarized components weight in gramms as shown in figure (hint: use function SUM and GROUP BY clause).
