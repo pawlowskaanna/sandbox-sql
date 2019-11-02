@@ -129,4 +129,11 @@ Display number of components for each element (hint: use function COUNT and GROU
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/1/pictures/z1q3.png" width="350" >
 
     -- Solution SQL
-    -- TODO
+    -- TO CORRECT
+    
+    SELECT SE.NAME "ELEMENT_NAME" , 
+    COUNT (C.COMPONENT_CODE)"COMPONENTS" , SUM (C.WEIGHT) "COMPONENTS_WEIGHT"
+    FROM Z1.ELEMENT_COMPONENTS 
+    GROUP BY SE.NAME
+    JOIN STRUCTURAL_ELEMENTS SE ON SE.ELEMENT_CODE = ELEMENT_COMPONENTS.ELEMENT_CODE
+    JOIN COMPONENTS C ON C.COMPONENT_CODE = ELEMENT_COMPONENTS.COMPONENT_CODE;
