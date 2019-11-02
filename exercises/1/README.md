@@ -105,7 +105,10 @@ Select all components whose code begins with '6' and are heavier than 10 gramms.
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/1/pictures/z1.q1.png" width="200" >
 
     -- Solution SQL
-    -- TODO
+    SELECT NAME, SUBSTR(RPAD(WEIGHT, 4 ,'0') , -2) || 'g' "WEIGHT"  
+    FROM COMPONENTS
+    WHERE COMPONENT_CODE LIKE '6%'
+    ORDER BY WEIGHT desc;
     
 
     
