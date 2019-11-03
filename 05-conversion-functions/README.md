@@ -12,7 +12,7 @@ Saturday, the 17th of February, One Thousand Nine Hundred Ninety-Six.
     
     -- 'fm' - trims blank spaces
 ---
-:wrench: comparing values with the use of NVL2 function 
+:wrench: Comparing values with the use of NVL2 function 
 
     SELECT FIRST_NAME, LAST_NAME, JOB_ID,
     NVL2(NULLIF( Length(first_name), Length(last_name)), 'Different length' , 'Same length') NAME_LENGTHS
