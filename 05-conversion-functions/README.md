@@ -18,3 +18,5 @@ Saturday, the 17th of February, One Thousand Nine Hundred Ninety-Six.
     NVL2(NULLIF( Length(first_name), Length(last_name)), 'Different length' , 'Same length') NAME_LENGTHS
     FROM HR.EMPLOYEES
     WHERE DEPARTMENT_ID = 100;
+    
+<img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/05-conversion-functions/pictures/ch05-nvl2-clause.png" width="400">
