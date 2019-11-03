@@ -50,7 +50,7 @@ ___
     
 </br>
 :roller_coaster: TASK: </br>
-Envelope printing restricts the addressee field to 16 characters. Ideally, the addressee field contains employees’ FIRST_NAME and LAST_NAME values separated by a single space. When the combined length of an employee’s FIRST_NAME and LAST_NAME exceeds 15 characters, the addressee field should contain their formal name. An employee’s formal name is made up of the first letter of their FIRST_ NAME and the first 14 characters of their LAST_NAME. </br>
+Envelope printing restricts the address field to 16 characters. Ideally, the addressee field contains employees’ FIRST_NAME and LAST_NAME values separated by a single space. When the combined length of an employee’s FIRST_NAME and LAST_NAME exceeds 15 characters, the addressee field should contain their formal name. An employee’s formal name is made up of the first letter of their FIRST_ NAME and the first 14 characters of their LAST_NAME. </br>
 You are required to retrieve a list of FIRST_NAME and LAST_NAME values and formal names for employees where the combined length of FIRST_NAME and LAST_NAME exceeds 15 characters.
 </br>
 
@@ -64,4 +64,13 @@ You are required to retrieve a list of FIRST_NAME and LAST_NAME values and forma
     FROM HR.EMPLOYEES
     WHERE ( LENGTH(FIRST_NAME) + LENGTH(LAST_NAME) ) > 15 ;
     
+---
+</br>
+:fax: </br>
+Using SQL Developer or SQL*Plus, connect to the OE schema and complete the following tasks. Several quotations were requested for prices on color printers. The supplier information is not avail-
+able from the usual source, but you know that the supplier identification number is embedded in the CATALOG_URL column from the PRODUCT_INFORMATION table. You are required to retrieve the PRODUCT_NAME and CATALOG_URL values and to extract the supplier number from the CATALOG_URL column for all products which have both the words COLOR and PRINTER in the PRODUCT_DESCRIPTION column stored in any case.
+</br>
 
+    SELECT PRODUCT_NAME, CATALOG_URL, SUBSTR( CATALOG_URL, 17,6) "SUPPLIER_ID"
+    FROM OE.PRODUCT_INFORMATION
+    WHERE LOWER(PRODUCT_DESCRIPTION) LIKE '%color%' AND LOWER(PRODUCT_DESCRIPTION) LIKE '%printer%';
