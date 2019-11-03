@@ -11,3 +11,10 @@ Saturday, the 17th of February, One Thousand Nine Hundred Ninety-Six.
     WHERE TO_CHAR (HIRE_DATE, 'fmDAY') = 'Saturday' ;
     
     -- 'fm' - trims blank spaces
+---
+:wrench: comparing values with the use of NVL2 function 
+
+    SELECT FIRST_NAME, LAST_NAME, JOB_ID,
+    NVL2(NULLIF( Length(first_name), Length(last_name)), 'Different length' , 'Same length') NAME_LENGTHS
+    FROM HR.EMPLOYEES
+    WHERE DEPARTMENT_ID = 100;
