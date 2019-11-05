@@ -33,3 +33,5 @@ Saturday, the 17th of February, One Thousand Nine Hundred Ninety-Six.
     FROM HR.LOCATIONS
     WHERE COUNTRY_ID LIKE 'US'
     ORDER BY LOCATION_INFO;
+
+<img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/05-conversion-functions/pictures/ch05-decode-clause.png" width="550">
