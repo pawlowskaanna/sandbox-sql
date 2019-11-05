@@ -35,3 +35,10 @@ Saturday, the 17th of February, One Thousand Nine Hundred Ninety-Six.
     ORDER BY LOCATION_INFO;
 
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/05-conversion-functions/pictures/ch05-decode-clause.png" width="550">
+
+
+---
+:wrench:
+Using SQL Developer or SQL*Plus, connect to the OE schema and complete the following tasks.
+As part of a new marketing initiative, you are asked to prepare a list of customer birthdays that occur
+between two days ago and seven days from now. The list should retrieve rows from the CUSTOMERS table which include the CUST_FIRST_NAME, CUST_LAST_NAME, CUST_EMAIL, and DATE_ OF_BIRTH columns in ascending order based on the day and month components of the DATE_OF_ BIRTH value. An additional expression aliased as BIRTHDAY is required to return a descriptive mes- sage based on the following table.
