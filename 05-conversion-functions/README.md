@@ -20,3 +20,16 @@ Saturday, the 17th of February, One Thousand Nine Hundred Ninety-Six.
     WHERE DEPARTMENT_ID = 100;
     
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/05-conversion-functions/pictures/ch05-nvl2-clause.png" width="400">
+
+---
+:wrench: Using the DECODE clause - comparing values 
+
+    SELECT state_province, DECODE(STATE_PROVINCE, 'Washington', 'Headquarters', 
+        'Texas' , 'Oil Wells',
+        'California' , city,
+        'New Jersey' , street_address
+        ) "LOCATION_INFO",
+        COUNTRY_ID, CITY
+    FROM HR.LOCATIONS
+    WHERE COUNTRY_ID LIKE 'US'
+    ORDER BY LOCATION_INFO;
