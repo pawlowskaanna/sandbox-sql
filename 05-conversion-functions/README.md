@@ -49,8 +49,7 @@ between two days ago and seven days from now. The list should retrieve rows from
 
 Create a report containing the number of employees who left their jobs, grouped by the year in which they left. The jobs they performed are also required. The results must be sorted in descending order based on the number of employees in each group. The report must list the year, the JOB_ID, and the number of employees who left a particular job in that year
 
-    -- The JOB_ID is tricky, is must be added to GROUP BY clause as otherwise it is impossible to propperly analyse data. It is not said in the exercise but it has to be added to the GROUP BY clause to get a proper query result
-    
+    -- The JOB_ID is tricky, ts must be added to GROUP BY clause as otherwise it is impossible to propperly analyse data. It is not said in the exercise but it has to be added to the GROUP BY clause to get a proper query result
     
     SELECT TO_CHAR(END_DATE, 'YYYY') "LAST_YEAR" , JOB_ID,
     COUNT (EMPLOYEE_ID) "NUMBER_OF_EMP"
