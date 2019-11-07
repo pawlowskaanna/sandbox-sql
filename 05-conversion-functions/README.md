@@ -42,3 +42,19 @@ Saturday, the 17th of February, One Thousand Nine Hundred Ninety-Six.
 Using SQL Developer or SQL*Plus, connect to the OE schema and complete the following tasks.
 As part of a new marketing initiative, you are asked to prepare a list of customer birthdays that occur
 between two days ago and seven days from now. The list should retrieve rows from the CUSTOMERS table which include the CUST_FIRST_NAME, CUST_LAST_NAME, CUST_EMAIL, and DATE_ OF_BIRTH columns in ascending order based on the day and month components of the DATE_OF_ BIRTH value. An additional expression aliased as BIRTHDAY is required to return a descriptive mes- sage based on the following table.
+
+
+---
+:wrench:
+
+Create a report containing the number of employees who left their jobs, grouped by the year in which they left. The jobs they performed are also required. The results must be sorted in descending order based on the number of employees in each group. The report must list the year, the JOB_ID, and the number of employees who left a particular job in that year
+
+    -- The JOB_ID is tricky, is must be added to GROUP BY clause as otherwise it is impossible to propperly analyse data. It is not said in the exercise but it has to be added to the GROUP BY clause to get a proper query result
+    
+    
+    SELECT TO_CHAR(END_DATE, 'YYYY') "LAST_YEAR" , JOB_ID,
+    COUNT (EMPLOYEE_ID) "NUMBER_OF_EMP"
+    FROM HR.JOB_HISTORY
+    WHERE END_DATE IS NOT NULL
+    GROUP BY TO_CHAR(END_DATE, 'YYYY'), JOB_ID
+    ORDER BY 2 DESC;
