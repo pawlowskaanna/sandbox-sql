@@ -57,3 +57,12 @@ Create a report containing the number of employees who left their jobs, grouped 
     WHERE END_DATE IS NOT NULL
     GROUP BY TO_CHAR(END_DATE, 'YYYY'), JOB_ID
     ORDER BY 2 DESC;
+
+---
+:wrench: The HAVING clause - simple query
+
+    SELECT TO_CHAR(HIRE_DATE, 'DAY')HIRE_DAY , COUNT(*) 
+    FROM HR.EMPLOYEES 
+    GROUP BY TO_CHAR(HIRE_DATE,'DAY')
+    HAVING COUNT(*) >15
+    ORDER BY 1;
