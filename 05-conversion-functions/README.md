@@ -66,3 +66,17 @@ Create a report containing the number of employees who left their jobs, grouped 
     GROUP BY TO_CHAR(HIRE_DATE,'DAY')
     HAVING COUNT(*) >15
     ORDER BY 1;
+
+---
+:wrench: Chapter 6 - summing up
+
+    -- Listing all statuses
+    SELECT DISTINCT PRODUCT_STATUS FROM OE.PRODUCT_INFORMATION;
+
+    -- report
+    SELECT PRODUCT_STATUS, COUNT(PRODUCT_STATUS), SUM(LIST_PRICE)
+    FROM OE.PRODUCT_INFORMATION
+    -- WHERE PRODUCT_STATUS <> 'orderable'
+    WHERE NOT(PRODUCT_STATUS = 'orderable')
+    GROUP BY PRODUCT_STATUS 
+    HAVING SUM(LIST_PRICE) > 4000;             
