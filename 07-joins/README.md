@@ -12,4 +12,4 @@ Alias the EMPLOYEES table as EMP and the JOB_HISTORY table as JH.
     FROM HR.employees EMP NATURAL JOIN HR.job_history JH 
 
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/07-joins/pictures/ch07-natural-join.png" 
-width="500">
+width="650">
