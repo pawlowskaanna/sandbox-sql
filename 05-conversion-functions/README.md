@@ -80,3 +80,5 @@ Create a report containing the number of employees who left their jobs, grouped 
     WHERE NOT(PRODUCT_STATUS = 'orderable')
     GROUP BY PRODUCT_STATUS 
     HAVING SUM(LIST_PRICE) > 4000;             
+
+<img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/05-conversion-functions/pictures/ch-06-test.png" width="500">
