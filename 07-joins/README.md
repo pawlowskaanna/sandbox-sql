@@ -21,3 +21,5 @@ width="650">
     FROM HR.DEPARTMENTS D 
     LEFT OUTER JOIN HR.EMPLOYEES E ON (E.DEPARTMENT_ID = D.DEPARTMENT_ID)
     WHERE E.DEPARTMENT_ID IS NULL ; 
+
+<img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/07-joins/pictures/cho7-left-outer-join.png" width="1500">
