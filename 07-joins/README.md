@@ -1,5 +1,6 @@
  # Join - types, examples for learning purpose
  
+:pushpin: Use NATURAL JOIN
 :wrench: 
 </br>There are 3 identically named columns with the EMPLOYEES table: EMPLOYEE_ID, JOB_ID, and DEPARTMENT_ID. </br>
    Fetch the EMPLOYEE_ID, JOB_ID, DEPARTMENT_ID, LAST_NAME, HIRE_DATE, and END_DATE values for all rows retrieved using a pure natural join. </br>
