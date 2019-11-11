@@ -15,6 +15,8 @@
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/07-joins/pictures/ch07-natural-join.png" 
 width="650">
 
+---
+
 :pushpin: Use LEFT OUTER JOIN </br> 
 
     SELECT D.DEPARTMENT_NAME , E.DEPARTMENT_ID
