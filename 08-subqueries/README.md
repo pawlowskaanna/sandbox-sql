@@ -2,7 +2,7 @@
  
 :pushpin: 3 level subquery
 
-    -- Query all employees who work in departments located in the United Kingdom </br>
+    -- Query all employees who work in departments located in the United Kingdom 
     
     select E.last_name from hr.employees E where department_id in
             (select D.department_id from hr.departments D 
