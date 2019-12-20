@@ -1,6 +1,21 @@
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/zielnik/pictures/tresc-zadania.png" width="700">
 
--- Creating tables
+Diagram ERD
+
+<img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/zielnik/pictures/zielnik-ERD.png" width="300">
+
+---
+
+Encje
+
+<img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/zielnik/pictures/zielnik-encje.png" width="600">
+
+---
+Tabele
+
+<img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/zielnik/pictures/zielnik-tabele.png" width="600">
+
+-- Tworzenie tabel
 
     CREATE TABLE ANIA.KOLEKCJE 
     (
@@ -44,4 +59,5 @@
         CONSTRAINT FK_KODY_KART_ZIELNIKÓW_W_HERBARIACH FOREIGN KEY(KOD_KARTY) REFERENCES ANIA.KARTY_ZIELNIKA(KOD_KARTY),
         CONSTRAINT FK_KODY_HERBARIOW FOREIGN KEY(KOD_HERBARIUM) REFERENCES ANIA.HERBARIA(KOD_HERBARIUM)
     );
+   
    
