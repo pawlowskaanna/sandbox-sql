@@ -15,7 +15,9 @@ Tabele
 
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/exercises/zielnik/pictures/zielnik-tabele.png" width="600">
 
--- Tworzenie tabel
+---
+
+DDL
 
     CREATE TABLE ANIA.KOLEKCJE 
     (
