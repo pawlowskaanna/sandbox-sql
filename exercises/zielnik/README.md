@@ -52,6 +52,14 @@ DDL
     
 </br>
 
+    ALTER TABLE ANIA.KARTY_ZIELNIKÓW_W_HERBARIACH MODIFY
+    (
+        KOD_KARTY           NOT NULL,
+        KOD_HERBARIUM       NOT NULL
+    );
+
+</br>
+
     CREATE TABLE ANIA.KARTY_ZIELNIKÓW_W_HERBARIACH
     (
         KOD_KARTY           VARCHAR2 (20 CHAR),
