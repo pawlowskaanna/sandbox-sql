@@ -10,7 +10,14 @@ Saturday, the 17th of February, One Thousand Nine Hundred Ninety-Six.
     FROM HR.EMPLOYEES
     WHERE TO_CHAR (HIRE_DATE, 'fmDAY') = 'Saturday' ;
     
-    -- 'fm' - trims blank spaces
+    -- 'fm' - trims blank spaces </br>
+    
+Retrive a list of people hired before 2003
+    
+    select first_name, last_name
+    from hr.employees
+    where  HIRE_DATE < TO_DATE('2003', 'YYYY') ; 
+    
 ---
 :wrench: Comparing values with the use of NVL2 function 
 
