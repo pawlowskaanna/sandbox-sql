@@ -18,6 +18,10 @@ Retrive a list of people hired before 2003
     from hr.employees
     where  HIRE_DATE < TO_DATE('2003', 'YYYY') ; 
     
+    select first_name, last_name
+    from hr.employees E join HR.job_history J ON (E.employee_id = J.employee_id)
+    where J.start_date BETWEEN TO_DATE('2003', 'YYYY') AND TO_DATE('2006' , 'YYYY');
+    
 ---
 :wrench: Comparing values with the use of NVL2 function 
 
