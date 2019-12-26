@@ -32,11 +32,13 @@ Retrive a list of people hired before 2003
 ---
 Using NVL function
 
-    SELECT FIRST_NAME, LAST_NAME, SALARY, COMMISSION_PCT, SALARY + (SALARY * NVL(COMMISSION_PCT,0)) "FULLSALARY"
-    FROM HR.EMPLOYEES
+    SELECT FIRST_NAME, LAST_NAME, SALARY, COMMISSION_PCT, SALARY + (SALARY * NVL(COMMISSION_PCT,0)) "FULLSALARY" , 
+    (SALARY * NVL(COMMISSION_PCT,0)) "BONUS" ,
+    (1+ NVL(TO_CHAR(END_DATE, 'YYYY'), SYSDATE) - TO_CHAR(START_DATE, 'YYYY')) "Work time"
+    FROM HR.EMPLOYEES E JOIN HR.JOB_HISTORY J ON (E.EMPLOYEE_ID = J.EMPLOYEE_ID)
     ORDER BY COMMISSION_PCT NULLS LAST;
 
-
+Query before upgrade:
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/05-conversion-functions/pictures/ch05-nvl-clause.png" width="700">
 
 ---
