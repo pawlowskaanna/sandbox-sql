@@ -25,7 +25,9 @@ Retrive a list of people hired before 2003
 ---
 
     SELECT FIRST_NAME || ' ' || LAST_NAME || ' jest z nami od ' || to_char(HIRE_DATE,'DD.MM.YYYY') || ' i zarabia ' || SALARY     ZESTAWIENIE
-    FROM HR.EMPLOYEES; 
+    FROM HR.EMPLOYEES
+    WHERE SALARY BETWEEN 10000 AND 14000
+    ORDER BY SALARY DESC; 
     
 ---
 :wrench: Comparing values with the use of NVL2 function 
