@@ -30,6 +30,17 @@ Retrive a list of people hired before 2003
     ORDER BY SALARY DESC; 
     
 ---
+Using NVL function
+
+    SELECT FIRST_NAME, LAST_NAME, SALARY, COMMISSION_PCT, SALARY+(NVL(COMMISSION_PCT,0)) "FULLSALARY"
+    FROM HR.EMPLOYEES
+    ORDER BY COMMISSION_PCT NULLS LAST;
+
+<img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/05-conversion-functions/pictures/ch05-nvl-clause.png" width="700">
+
+---
+
+
 :wrench: Comparing values with the use of NVL2 function 
 
     SELECT FIRST_NAME, LAST_NAME, JOB_ID,
