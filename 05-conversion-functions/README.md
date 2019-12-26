@@ -39,6 +39,7 @@ Using NVL function
     ORDER BY COMMISSION_PCT NULLS LAST;
 
 Query before upgrade:
+</br>
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/05-conversion-functions/pictures/ch05-nvl-clause.png" width="700">
 
 ---
