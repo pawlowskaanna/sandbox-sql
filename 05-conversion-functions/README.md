@@ -23,6 +23,11 @@ Retrive a list of people hired before 2003
     where J.start_date BETWEEN TO_DATE('2003', 'YYYY') AND TO_DATE('2006' , 'YYYY');
     
 ---
+
+    SELECT FIRST_NAME || ' ' || LAST_NAME || ' jest z nami od ' || to_char(HIRE_DATE,'DD.MM.YYYY') || ' i zarabia ' || SALARY     ZESTAWIENIE
+    FROM HR.EMPLOYEES; 
+    
+---
 :wrench: Comparing values with the use of NVL2 function 
 
     SELECT FIRST_NAME, LAST_NAME, JOB_ID,
