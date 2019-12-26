@@ -20,3 +20,9 @@ Sample SQL statements
     FROM SYS.dual
 
 ![alt text](https://github.com/pawlowskaanna/sandbox-sql/blob/master/02-data-retrieval/images/ch02q3.PNG )
+
+---
+How can we use the NVL:
+
+    select first_name, last_name, salary, commission_pct, salary+(NVL(commission_pct,0))
+    from hr.employees;
