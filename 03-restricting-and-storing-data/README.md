@@ -99,4 +99,4 @@ able from the usual source, but you know that the supplier identification number
     order by (avg(H.end_date - H.start_date)) asc
     fetch FIRST 1 row only );
     
-<img src="" width="">
+<img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/03-restricting-and-storing-data/images/max-min-worktime-dep.png" width="400">
