@@ -37,3 +37,16 @@ How can we use the NVL:
     from hr.job_history
     group by employee_id
     having count(*)>1 ;
+    
+---
+
+    -- Sprawdź, którzy pracownicy “są bliżej niż dalej” pensji maksymalnej dla swojego stanowiska </br> 
+    (tzn. przekroczyli próg połowy sumy będącej różnicą między płacą minimalną a maksymalną).
+   
+           select E.first_name, E.last_name, J.job_title,  E.salary, J.max_salary, J.min_salary, 
+           (J.max_salary -    J.min_salary)/2
+           from hr.employees E join hr.jobs J on (E.job_id = J.job_id)
+           where E.salary > (( (J.max_salary - J.min_salary)/2 )+ J.min_salary);
+
+
+
