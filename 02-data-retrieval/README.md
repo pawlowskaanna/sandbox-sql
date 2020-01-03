@@ -26,3 +26,13 @@ How can we use the NVL:
 
     select first_name, last_name, salary, commission_pct, salary+(NVL(commission_pct,0))
     from hr.employees;
+  
+</br>  
+---
+
+-- Znajdź pracowników, którzy mają więcej niż jeden okres zatrudnienia.
+
+    select employee_id, count(*)
+    from hr.job_history
+    group by employee_id
+    having count(*)>1 ;
