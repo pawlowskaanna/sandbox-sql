@@ -30,7 +30,7 @@ How can we use the NVL:
 </br>  
 ---
 
--- Znajdź pracowników, którzy mają więcej niż jeden okres zatrudnienia.
+    -- Znajdź pracowników, którzy mają więcej niż jeden okres zatrudnienia.
 
     select employee_id, count(*)
     from hr.job_history
