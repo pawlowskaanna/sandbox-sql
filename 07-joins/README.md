@@ -25,3 +25,16 @@ width="650">
     WHERE E.DEPARTMENT_ID IS NULL ; 
 
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/07-joins/pictures/cho7-left-outer-join.png" width="1500">
+
+---
+
+    -- Dla każdego klienta  pokaż datę oraz numer pierwszego złożonego zamówienia
+
+    SELECT SQ.CUSTOMER_ID, ORDER_ID, SQ.MIN_ORDER_DATE
+    FROM OE.ORDERS O JOIN (
+        select CUSTOMER_ID, TRUNC(MIN(ORDER_DATE) ) "MIN_ORDER_DATE"
+        FROM OE.ORDERS
+        GROUP BY CUSTOMER_ID
+    ) SQ 
+    ON O.CUSTOMER_ID=SQ.CUSTOMER_ID AND TRUNC(O.ORDER_DATE)=TRUNC(SQ.MIN_ORDER_DATE)
+    ORDER BY SQ.CUSTOMER_ID;
