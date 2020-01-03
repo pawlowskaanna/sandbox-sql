@@ -74,3 +74,29 @@ able from the usual source, but you know that the supplier identification number
     SELECT PRODUCT_NAME, CATALOG_URL, SUBSTR( CATALOG_URL, 17,6) "SUPPLIER_ID"
     FROM OE.PRODUCT_INFORMATION
     WHERE LOWER(PRODUCT_DESCRIPTION) LIKE '%color%' AND LOWER(PRODUCT_DESCRIPTION) LIKE '%printer%';
+    
+---
+</br>
+
+-- Policz średnią długość stażu pracy dla poszczególnych stanowisk.
+
+    select J.job_title, (avg(H.end_date - H.start_date)) "AVG_WORK_TIME_DAYS"
+    from hr.job_history H join hr.jobs J on (H.job_id = J.job_id)
+    group by J.job_title; 
+</br>
+---- W którym departamencie staż pracy jest najniższy, a w którym najwyższy? (średnie)
+</br>
+
+    select * from ( select D.department_name, (avg(H.end_date - H.start_date)) "AVG_WORK_TIME_DAYS"
+    from hr.job_history H join hr.departments D on (H.department_id = D.department_id)
+    group by D.department_name
+    order by (avg(H.end_date - H.start_date)) desc
+    fetch FIRST 1 row only )
+    union
+    select * from ( select D.department_name, (avg(H.end_date - H.start_date)) "AVG_WORK_TIME_DAYS"
+    from hr.job_history H join hr.departments D on (H.department_id = D.department_id)
+    group by D.department_name
+    order by (avg(H.end_date - H.start_date)) asc
+    fetch FIRST 1 row only );
+    
+<img src="" width="">
