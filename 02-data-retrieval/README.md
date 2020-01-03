@@ -28,6 +28,7 @@ How can we use the NVL:
     from hr.employees;
   
 </br>  
+
 ---
 
     -- Znajdź pracowników, którzy mają więcej niż jeden okres zatrudnienia.
