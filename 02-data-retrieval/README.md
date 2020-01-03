@@ -40,7 +40,7 @@ How can we use the NVL:
     
 ---
 
-    -- Sprawdź, którzy pracownicy “są bliżej niż dalej” pensji maksymalnej dla swojego stanowiska </br> 
+    -- Sprawdź, którzy pracownicy “są bliżej niż dalej” pensji maksymalnej dla swojego stanowiska 
     (tzn. przekroczyli próg połowy sumy będącej różnicą między płacą minimalną a maksymalną).
    
            select E.first_name, E.last_name, J.job_title,  E.salary, J.max_salary, J.min_salary, 
