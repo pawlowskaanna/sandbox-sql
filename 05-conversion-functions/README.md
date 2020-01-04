@@ -115,3 +115,17 @@ Create a report containing the number of employees who left their jobs, grouped 
     HAVING SUM(LIST_PRICE) > 4000;             
 
 <img src="https://github.com/pawlowskaanna/sandbox-sql/blob/master/05-conversion-functions/pictures/ch-06-test.png" width="500">
+
+
+---
+
+:wrench: Zastępowanie więcej niż jednego ciągu znaków </br>
+
+    select cust_first_name "First name", cust_last_name "Last name", decode (gender, 'F', 'Pani',  'M', 'Pan') "Gender"
+    from OE.customers
+    where customer_id in (103, 227, 131, 172, 165, 213);
+
+
+    select decode (gender, 'F', 'Pani',  'M', 'Pan') || ' ' || cust_first_name || ' ' || cust_last_name "Customers"
+    from OE.customers
+    where customer_id in (103, 227, 131, 172, 165, 213);
