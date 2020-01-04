@@ -1,4 +1,11 @@
-# Data Retrieval samples for learning purpose
+## Data Retrieval samples for learning purpose
+
+### Data dictionary query
+
+    select * from all_tables;
+
+---
+
 Sample SQL statements
 
 :wrench: PL: Konkatenacja tekstu i danych jako nazwana kolumna  
