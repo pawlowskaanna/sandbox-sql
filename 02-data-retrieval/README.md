@@ -3,6 +3,8 @@
 ### Data dictionary query
 
     select * from all_tables;
+    
+    select owner, table_name from user_tables;
 
 ---
 
