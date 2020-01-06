@@ -129,3 +129,13 @@ Create a report containing the number of employees who left their jobs, grouped 
     select decode (gender, 'F', 'Pani',  'M', 'Pan') || ' ' || cust_first_name || ' ' || cust_last_name "Customers"
     from OE.customers
     where customer_id in (103, 227, 131, 172, 165, 213);
+    
+---
+
+### TO_NUMBER
+
+select EXTRACT(YEAR FROM ORDER_DATE) "YEAR", TO_CHAR(EXTRACT(MONTH FROM ORDER_DATE) "MONTH",
+to_char(sum(order_total), '9G999D99') "TOTAL" 
+from OE.orders
+group by  EXTRACT(YEAR FROM ORDER_DATE), EXTRACT(MONTH FROM ORDER_DATE)
+ORDER BY "YEAR", "MONTH" ;
