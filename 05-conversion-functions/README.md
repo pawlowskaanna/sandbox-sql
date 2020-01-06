@@ -139,3 +139,11 @@ Create a report containing the number of employees who left their jobs, grouped 
     FROM OE.ORDERS
     GROUP BY  EXTRACT(YEAR FROM ORDER_DATE), EXTRACT(MONTH FROM ORDER_DATE)
     ORDER BY "YEAR", "MONTH" ;
+    
+    -- Eventually
+    
+    SELECT to_char(order_date, 'YYYY') as "Year", to_char(order_date, 'MM') as "Month", 
+    to_char(SUM(order_total), '999,999.99') as "Total"
+    FROM orders
+    GROUP BY to_char(order_date, 'YYYY'), to_char(order_date, 'MM')
+    ORDER BY "Year", "Month";
